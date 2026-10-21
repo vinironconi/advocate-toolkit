@@ -1,9 +1,12 @@
-from flask import Flask
+from flask import Flask, render_template
+from toolkit import load_products, search_products, calculate_total, to_guaranis, calculate_pv, pv_remaining, PV_GOAL, EXCHANGE_RATE, PRODUCTS_FILE
+
 app = Flask(__name__)
+products = load_products(PRODUCTS_FILE)
 
 @app.route('/')
 def index():
-    return "Bem vindo ao aplicativo para consultores de bem-estar!"  
+    return render_template('index.html', products=products, pv_goal=PV_GOAL, exchange_rate=EXCHANGE_RATE)  
 
 @app.route('/about')
 def about():

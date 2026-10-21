@@ -1,0 +1,15 @@
+{% extends "layout.html" %}
+
+
+{% block content %}
+{% for product in products %}
+    <div>
+        <h2>{{ product.name }} ({{ product.size }})</h2>
+        <p>Categoria: {{ product.category }}</p>
+        <p>Preço Regular: {{"%.2f" | format(product.regular) }}</p>
+        <p>Preço Membros: {{"%.2f" | format(product.membros) }}</p>
+        <p>PV: {{":g" | format(product.pv) }}</p>
+    </div>
+{% endfor %}
+
+{%endblock%}
