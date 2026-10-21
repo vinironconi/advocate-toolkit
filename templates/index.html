@@ -2,14 +2,26 @@
 
 
 {% block content %}
-{% for product in products %}
-    <div>
-        <h2>{{ product.name }} ({{ product.size }})</h2>
-        <p>Categoria: {{ product.category }}</p>
-        <p>Preço Regular: {{"%.2f" | format(product.regular) }}</p>
-        <p>Preço Membros: {{"%.2f" | format(product.membros) }}</p>
-        <p>PV: {{":g" | format(product.pv) }}</p>
-    </div>
-{% endfor %}
+<form action="/" method="get">
+    <input type="search" name="query" value="{{ query }}" placeholder="Pesquisar produtos...">
+    <button type="submit">Pesquisar</button>
+</form>
+{%if products %}
+    {% for product in products %}
+        <div>
+            <h2>{{ product.name }} ({{ product.size }})</h2>
+            <p>Categoria: {{ product.category }}</p>
+            <p>Preço Regular: R${{"%.2f" | format(product.regular) }}</p>
+            <p>Preço Membros: R${{"%.2f" | format(product.membros) }}</p>
+            <p>PV: {{"%g" | format(product.pv) }}</p>
+        </div>
+    {% endfor %}
+    {% if query %}
+        <a href="/">Mostrar todos os produtos</a>
+    {% endif %}
+{% else %}
+    <p>Nenhum produto encontrado.</p>
+{% endif %}
+
 
 {%endblock%}
