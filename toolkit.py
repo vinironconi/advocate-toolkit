@@ -58,3 +58,12 @@ def pv_remaining(total_pv, goal=PV_GOAL):
     else:
         return remain
 
+
+def format_price(value, currency):
+    if currency == "BRL":
+        return f"R$ {value:.2f}" 
+    elif currency == "PYG":
+        return f"Gs {to_guaranis(value):,}".replace(",", ".")
+    else:
+        raise ValueError("Invalid Currency")
+

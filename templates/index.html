@@ -11,9 +11,9 @@
         <div>
             <h2>{{ product.name }} ({{ product.size }})</h2>
             <p>Categoria: {{ product.category }}</p>
-            <p>Preço Regular: R${{"%.2f" | format(product.regular) }}</p>
-            <p>Preço Membros: R${{"%.2f" | format(product.membros) }}</p>
-            <p>PV: {{"%g" | format(product.pv) }}</p>
+            <p>Preço Regular: {{ product.regular | format_price(currency) }}</p>
+            <p>Preço Membros: {{ product.membros | format_price(currency) }}</p>
+            <p>PV: {{ "%g" | format(product.pv) }}</p>
         </div>
     {% endfor %}
     {% if query %}
