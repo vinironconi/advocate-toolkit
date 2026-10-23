@@ -1,0 +1,21 @@
+{%extends "layout.html"%}
+{% block content %}
+    {%if order %}
+        <table>
+            <tr><th>Produto</th><th>Quantidade</th><th>Tamanho</th><th>Membros</th><th>Regular</th><th>PV</th></tr>
+            {% for product, quantity in order %}
+            <tr><td>{{product.name}}</td><td>{{quantity}}</td><td>{{product.size}}</td><td>{{(product.membros) | format_price(currency)}}</td><td>{{(product.regular) | format_price(currency)}}</td><td>{{"%g" | format(product.pv)}}</td></tr>
+            {% endfor %}
+        </table>
+        <p>Total Membros: {{ total_price_membros | format_price(currency) }}</p>
+        <p>Total Regular: {{ total_price_regular | format_price(currency) }}</p>
+        <p>Total PV: {{"%g" | format(total_pv)}}</p> 
+        {% if pv_remaining > 0 %}
+            <p>Faltam {{ pv_remaining }} PV para atingir a meta de {{ PV_GOAL }} PV.</p>
+        {% else %}
+            <p>Parabéns! Você atingiu a meta de {{ PV_GOAL }} PV.</p>
+        {% endif %}
+    {%else%}
+        <p>O seu pedido está vazio.</p>
+    {%endif%}
+{%endblock%}
