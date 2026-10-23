@@ -1,5 +1,5 @@
 from flask import Flask, redirect, render_template, request, session
-from toolkit import load_products, search_products, calculate_total, to_guaranis, calculate_pv, pv_remaining, format_price, PV_GOAL, EXCHANGE_RATE, PRODUCTS_FILE
+from toolkit import load_products, search_products, calculate_total, to_guaranis, calculate_pv, pv_remaining, format_price, get_product_by_sku, PV_GOAL, EXCHANGE_RATE, PRODUCTS_FILE
 
 
 app = Flask(__name__)
@@ -30,11 +30,7 @@ def set_currency():
 @app.route("/add_to_cart", methods=["POST"])
 def add_to_cart():
     sku = request.form.get("sku")
-    found_product = None
-    for product in products:
-        if product["sku"] == sku:
-            found_product = product
-            break
+    found_product = get_product_by_sku(products, sku)
     try:
         quantity = int(request.form.get("quantity", 1))
         if quantity < 1:
@@ -47,3 +43,17 @@ def add_to_cart():
         order[found_product["sku"]] = order.get(found_product["sku"], 0) + quantity
         session["order"] = order
     return redirect("/")
+
+@app.route("/order", methods=["GET"])    
+def view_order():
+    full_order = []
+    order = session.get("order", {})
+    for sku, quantity in order.items():
+        product = get_product_by_sku(products, sku)
+        if product:
+            full_order.append((product, quantity))
+    total_price_membros = calculate_total(full_order, price_type="membros")
+    total_price_regular = calculate_total(full_order, price_type="regular")
+    total_pv = calculate_pv(full_order)
+    currency = session.get("currency", "BRL")  # Default to BRL if not set
+    return render_template("order.html", order=full_order, total_price_membros=total_price_membros, total_price_regular=total_price_regular, total_pv=total_pv, currency=currency, pv_goal=PV_GOAL, pv_remaining=pv_remaining(total_pv, PV_GOAL))

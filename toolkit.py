@@ -67,3 +67,9 @@ def format_price(value, currency):
     else:
         raise ValueError("Invalid Currency")
 
+    
+def get_product_by_sku(products, sku):
+    for product in products:
+        if product["sku"] == sku:
+            return product 
+    return None
