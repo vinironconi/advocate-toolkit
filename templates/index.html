@@ -1,33 +1,37 @@
 {% extends "layout.html" %}
-
-
 {% block content %}
 <form action="/" method="get">
     <input type="search" name="query" value="{{ query }}" placeholder="Pesquisar produtos...">
-    <button type="submit">Pesquisar</button>
+    <button type="submit" class="btn btn-outline-primary">Pesquisar</button>
 </form>
 {%if products %}
+    <div class="row">
     {% for product in products %}
-        <div>
-            <h2>{{ product.name }} ({{ product.size }})</h2>
-            <p>Categoria: {{ product.category }}</p>
-            <p>Preço Regular: {{ product.regular | format_price(currency) }}</p>
-            <p>Preço Membros: {{ product.membros | format_price(currency) }}</p>
-            <p>PV: {{ "%g" | format(product.pv) }}</p>
+        <div class="col-12 col-md-6 col-lg-4 mb-4">
+            <div class="card h-100">
+                <div class="card-body">
+                    <h5 class="card-title">{{ product.name }} ({{ product.size }})</h5>
+                    <p class="card-text">Categoria: {{ product.category }}</p>
+                    <p class="card-text">Preço Regular: {{ product.regular | format_price(currency) }}</p>
+                    <p class="card-text">Preço Membros: {{ product.membros | format_price(currency) }}</p>
+                    <p class="card-text">PV: {{ "%g" | format(product.pv) }}</p>
+                </div>
+                <div class="card-footer">
+                    <form action="/add_to_cart" method="post" class="d-flex align-items-center">
+                        <input type="hidden" name="sku" value="{{ product.sku }}">
+                        <input type="number" name="quantity" value="1" min="1" class="form-control me-2" style="width: 80px;">
+                        <button type="submit" class="btn btn-primary">Adicionar</button>
+                    </form>
+                </div>
+            </div>
         </div>
-        <form action="/add_to_cart" method="post">
-            <input type="hidden" name="sku" value="{{ product.sku }}">
-            <input type="number" name="quantity" value="1" min="1"> 
-            <button type="submit">Adicionar ao carrinho</button>
-        </form>
-    {% endfor %}
+        {% endfor %}
+    </div>
     {% if query %}
-        <a href="/">Mostrar todos os produtos</a>
+        <a href="/" class="btn btn-outline-secondary">Mostrar todos os produtos</a>
     {% endif %}
-{% else %}
+    {% else %}
     <p>Nenhum produto encontrado.</p>
-    <a href="/">Mostrar todos os produtos</a>
-{% endif %}
-
-
+    <a href="/" class="btn btn-outline-secondary">Mostrar todos os produtos</a>
+    {% endif %}
 {%endblock%}
