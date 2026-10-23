@@ -26,3 +26,24 @@ def set_currency():
     if currency in ["BRL", "PYG"]:
         session["currency"] = currency
     return redirect("/")
+
+@app.route("/add_to_cart", methods=["POST"])
+def add_to_cart():
+    sku = request.form.get("sku")
+    found_product = None
+    for product in products:
+        if product["sku"] == sku:
+            found_product = product
+            break
+    try:
+        quantity = int(request.form.get("quantity", 1))
+        if quantity < 1:
+            raise ValueError("Quantity must be at least 1")
+    except ValueError:
+        return redirect("/")  # Redirect back to the main page if quantity is invalid
+
+    if found_product:
+        order = session.get("order", {})
+        order[found_product["sku"]] = order.get(found_product["sku"], 0) + quantity
+        session["order"] = order
+    return redirect("/")
