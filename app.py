@@ -25,7 +25,7 @@ def set_currency():
     currency = request.form.get("currency")
     if currency in ["BRL", "PYG"]:
         session["currency"] = currency
-    return redirect("/")
+    return redirect(request.referrer or "/")
 
 @app.route("/add_to_cart", methods=["POST"])
 def add_to_cart():
@@ -36,13 +36,36 @@ def add_to_cart():
         if quantity < 1:
             raise ValueError("Quantity must be at least 1")
     except ValueError:
-        return redirect("/")  # Redirect back to the main page if quantity is invalid
+        return redirect(request.referrer or "/")  # Redirect back to the main page if quantity is invalid
 
     if found_product:
         order = session.get("order", {})
         order[found_product["sku"]] = order.get(found_product["sku"], 0) + quantity
         session["order"] = order
-    return redirect("/")
+    return redirect(request.referrer or "/")
+
+@app.route("/clear_cart", methods=["POST"])
+def clear_cart():
+    session.pop("order", None)
+    return redirect(request.referrer or "/")
+
+@app.route("/remove_from_cart", methods=["POST"])
+def remove_from_cart():
+    sku = request.form.get("sku")
+    found_product = get_product_by_sku(products, sku)
+    try:
+        quantity = int(request.form.get("quantity", 1))
+        if quantity < 1:
+                raise ValueError("Quantity must be at least 1")
+    except ValueError:
+        return redirect(request.referrer or "/")  # Redirect back to the main page if quantity is invalid
+    if found_product:
+        order = session.get("order", {})
+        order[found_product["sku"]] = (order.get(found_product["sku"], 0) - quantity)
+        if order[found_product["sku"]] <= 0:
+            order.pop(found_product["sku"], None)
+        session["order"] = order
+    return redirect(request.referrer or "/")
 
 @app.route("/order", methods=["GET"])    
 def view_order():

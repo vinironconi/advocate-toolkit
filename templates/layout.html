@@ -8,6 +8,10 @@
 <body>
     <h1>Assistente de consultores</h1>
     <p>Bem-vindos ao Assistente de consultores!</p>
+    <nav>
+        <a href="/">Produtos</a> |
+        <a href="/order">Carrinho ({{session.get("order", {}).values() | sum}})</a>
+    </nav>
       <form action="/currency" method="post">
         <label for="currency">Escolha a moeda:</label>
         <select name="currency" id="currency">

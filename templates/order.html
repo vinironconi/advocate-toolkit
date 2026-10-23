@@ -2,19 +2,27 @@
 {% block content %}
     {%if order %}
         <table>
-            <tr><th>Produto</th><th>Quantidade</th><th>Tamanho</th><th>Membros</th><th>Regular</th><th>PV</th></tr>
+            <tr><th>Produto</th><th>Quantidade</th><th>Tamanho</th><th>Membros</th><th>Regular</th><th>PV</th><th></th></tr>
             {% for product, quantity in order %}
-            <tr><td>{{product.name}}</td><td>{{quantity}}</td><td>{{product.size}}</td><td>{{(product.membros) | format_price(currency)}}</td><td>{{(product.regular) | format_price(currency)}}</td><td>{{"%g" | format(product.pv)}}</td></tr>
+            <tr><td>{{product.name}}</td><td>{{quantity}}</td><td>{{product.size}}</td><td>{{(product.membros * quantity) | format_price(currency)}}</td>
+                <td>{{(product.regular * quantity) | format_price(currency)}}</td><td>{{"%g" | format(product.pv * quantity)}}</td>
+                <td><form action="/remove_from_cart" method="post">
+                <input type="number" name="quantity" value="1" min="1">
+                <input type="hidden" name="sku" value="{{product.sku}}">
+                <button type="submit">Remover</button></form></td></tr>
             {% endfor %}
         </table>
         <p>Total Membros: {{ total_price_membros | format_price(currency) }}</p>
         <p>Total Regular: {{ total_price_regular | format_price(currency) }}</p>
         <p>Total PV: {{"%g" | format(total_pv)}}</p> 
         {% if pv_remaining > 0 %}
-            <p>Faltam {{ pv_remaining }} PV para atingir a meta de {{ PV_GOAL }} PV.</p>
+            <p>Faltam {{"%g" | format(pv_remaining) }} PV para atingir a meta de {{ pv_goal }} PV.</p>
         {% else %}
             <p>Parabéns! Você atingiu a meta de {{ PV_GOAL }} PV.</p>
         {% endif %}
+        <form action="/clear_cart" method="post">
+            <button type="submit">Limpar carrinho</button>
+        </form>
     {%else%}
         <p>O seu pedido está vazio.</p>
     {%endif%}
