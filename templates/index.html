@@ -1,8 +1,10 @@
 {% extends "layout.html" %}
 {% block content %}
 <form action="/" method="get">
-    <input type="search" name="query" value="{{ query }}" placeholder="Pesquisar produtos...">
-    <button type="submit" class="btn btn-outline-primary">Pesquisar</button>
+    <div class="input-group mb-4">
+        <input type="search" name="query" value="{{ query }}" placeholder="Pesquisar produtos..." class="form-control">
+        <button type="submit" class="btn btn-outline-primary">Pesquisar</button>
+    </div>
 </form>
 {%if products %}
     <div class="row">

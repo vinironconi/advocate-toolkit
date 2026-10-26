@@ -18,12 +18,12 @@
         {% if pv_remaining > 0 %}
             <p>Faltam {{"%g" | format(pv_remaining) }} PV para atingir a meta de {{ pv_goal }} PV.</p>
         {% else %}
-            <p>Parabéns! Você atingiu a meta de {{ PV_GOAL }} PV.</p>
+            <p>Parabéns! Você atingiu a meta de {{ pv_goal }} PV.</p>
         {% endif %}
         <form action="/clear_cart" method="post">
             <button type="submit">Limpar carrinho</button>
         </form>
     {%else%}
-        <p>O seu pedido está vazio.</p>
+        <p>O seu carrinho está vazio.</p>
     {%endif%}
 {%endblock%}
