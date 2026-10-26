@@ -1,29 +1,40 @@
 {%extends "layout.html"%}
 {% block content %}
     {%if order %}
-        <table>
+    <div class="table-responsive">
+        <table class="table table-striped table-hover">
+            <thead>
             <tr><th>Produto</th><th>Quantidade</th><th>Tamanho</th><th>Membros</th><th>Regular</th><th>PV</th><th></th></tr>
+            </thead>
+            <tbody>
             {% for product, quantity in order %}
             <tr><td>{{product.name}}</td><td>{{quantity}}</td><td>{{product.size}}</td><td>{{(product.membros * quantity) | format_price(currency)}}</td>
                 <td>{{(product.regular * quantity) | format_price(currency)}}</td><td>{{"%g" | format(product.pv * quantity)}}</td>
-                <td><form action="/remove_from_cart" method="post">
-                <input type="number" name="quantity" value="1" min="1">
+                <td><form action="/remove_from_cart" method="post" class="d-flex align-items-center">
+                <input type="number" name="quantity" value="1" min="1" class="form-control me-2" style="width: 80px;">
                 <input type="hidden" name="sku" value="{{product.sku}}">
-                <button type="submit">Remover</button></form></td></tr>
+                <button type="submit" class="btn btn-outline-danger">Remover</button></form></td></tr>
             {% endfor %}
+            </tbody>
         </table>
-        <p>Total Membros: {{ total_price_membros | format_price(currency) }}</p>
-        <p>Total Regular: {{ total_price_regular | format_price(currency) }}</p>
-        <p>Total PV: {{"%g" | format(total_pv)}}</p> 
+    </div>
+    <div class="card mb-4">
+        <div class="card-body">
+        <p>Total Membros: <strong>{{ total_price_membros | format_price(currency) }}</strong></p>
+        <p>Total Regular: <strong>{{ total_price_regular | format_price(currency) }}</strong></p>
+        <p>Total PV: <strong>{{ "%g" | format(total_pv) }}</strong></p>
+        </div>
+    </div>
         {% if pv_remaining > 0 %}
-            <p>Faltam {{"%g" | format(pv_remaining) }} PV para atingir a meta de {{ pv_goal }} PV.</p>
+            <div class="alert alert-warning">Faltam {{"%g" | format(pv_remaining) }} PV para atingir a meta de {{ pv_goal }} PV.</div>
         {% else %}
-            <p>Parabéns! Você atingiu a meta de {{ pv_goal }} PV.</p>
+            <div class="alert alert-success">Parabéns! Você atingiu a meta de {{ pv_goal }} PV.</div>
         {% endif %}
         <form action="/clear_cart" method="post">
-            <button type="submit">Limpar carrinho</button>
+            <button type="submit" class="btn btn-danger">Limpar carrinho</button>
         </form>
     {%else%}
-        <p>O seu carrinho está vazio.</p>
+        <div class="alert alert-info">O seu carrinho está vazio.</div>
+        <a href="/" class="alert link">Voltar para produtos</a>
     {%endif%}
 {%endblock%}
