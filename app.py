@@ -1,9 +1,13 @@
 from flask import Flask, redirect, render_template, request, session
 from toolkit import load_products, search_products, calculate_total, to_guaranis, calculate_pv, pv_remaining, format_price, get_product_by_sku, PV_GOAL, EXCHANGE_RATE, PRODUCTS_FILE
+import os
 
 
 app = Flask(__name__)
-app.secret_key = "55dd0a6db3fac20e894d41cc59d16232"  # Replace with a secure secret key in production
+secret_key = os.environ.get("SECRET_KEY")
+if not secret_key:
+    raise ValueError("SECRET_KEY environment variable is not set.")
+app.secret_key = secret_key
 app.add_template_filter(format_price, "format_price")
 products = load_products(PRODUCTS_FILE)
 
