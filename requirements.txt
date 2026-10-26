@@ -2,3 +2,4 @@ tabulate
 pytest
 flask
 python-dotenv
+gunicorn
