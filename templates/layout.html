@@ -9,7 +9,10 @@
     <body>
         <nav class="navbar navbar-expand bg-body-tertiary mb-4">
             <div class="container">
-                <a class="navbar-brand" href="/">Assistente de consultores</a>
+                <a class="navbar-brand" href="/">
+                    <span class="d-none d-md-inline">Assistente de consultores</span>
+                    <span class="d-inline d-md-none">Assistente</span>
+                </a>
                 <div class="navbar-nav">
                     <a class="nav-link" href="/">Produtos</a>
                     <a class="nav-link" href="/order">Carrinho ({{ session.get("order", {}).values() | sum }})</a>
