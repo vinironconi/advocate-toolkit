@@ -1,16 +1,215 @@
 sku,name,size,category,membros,regular,pv
-60203327,Lavender,15mL,Single Oil,148,197,23
-60203323,Peppermint,15mL,Single Oil,138,184,23
-60203419,Lemon,15mL,Single Oil,86.25,115,11
-60203411,Frankincense,15mL,Single Oil,486.25,648,64
-60203421,Tea Tree,15mL,Single Oil,157.50,210,21
-60203410,On Guard,15mL,Blend,270,360,36
-60206121,Deep Blue Rub,120ml,Rub,222.75,297,33
-60203389,Balance,15mL,Blend,157.50,210,21
-60220994,Serenity,15mL,Blend,255,340,34
-60228146,LifeShot,1 Liter,Supplement,156,208,24
-60215500,Fractionated Coconut Oil,115mL,Accessory,106.25,142,11
-60229844,Beauty Power,210g,Supplement,198,264,35
-60215422,Kit Living Brasil,1 Kit,Kit,720,960,120
+60203876,Basil,15 ml,Single Oil,230,307,27
+60203875,Bergamot,15 ml,Single Oil,232.5,310,31
+60206619,Black Pepper,5 ml,Single Oil,187.5,250,24
+60217234,Breu Branco,5 ml,Single Oil,243.75,325,32
+60214933,Cassia,15 ml,Single Oil,150,200,20
+60203416,Cedarwood,15 ml,Single Oil,105,140,14
+60225517,Citronella,15 ml,Single Oil,92.5,123,12
+60203872,Clary Sage,15 ml,Single Oil,307.5,410,41
+60203871,Clove,15 ml,Single Oil,121.25,162,16
+60203605,Copaiba,15 ml,Single Oil,240,320,40
+60219361,Copaiba Touch,10 ml Roll-on,Single Oil,172.5,230,23
+60203870,Coriander,15 ml,Single Oil,172.5,230,23
+60203418,Cypress,15 ml,Single Oil,135,180,18
+60203851,Douglas Fir,5 ml,Single Oil,167.5,223,22
+60203326,Eucalyptus,15 ml,Single Oil,120,160,16
+60203788,Fennel,15 ml,Single Oil,105,140,14
+60203411,Frankincense,15 ml,Single Oil,486.25,648,64
+60206649,Frankincense Touch,10 ml,Single Oil,375,500,50
+60203787,Geranium,15 ml,Single Oil,238.75,318,31
+60203928,Ginger,15 ml,Single Oil,268.75,358,33
+60203423,Grapefruit,15 ml,Single Oil,140,187,17
+60224621,Guaiacwood,15 ml,Single Oil,127.5,170,16
+60206661,Jasmine Touch,10 ml,Single Oil,295,393,39
+60203921,Juniper Berry,5 ml,Single Oil,157.5,210,21
+60203327,Lavender,15 ml,Single Oil,148,197,23
+60206564,Lavender Touch,10 ml,Single Oil,120,160,16
+60203419,Lemon,15 ml,Single Oil,86.25,115,11
+60210370,Lemon Eucalyptus,15 ml,Single Oil,90,120,12
+60203322,Lemongrass,15 ml,Single Oil,82.5,110,11
+60203420,Lime,15 ml,Single Oil,107.5,143,14
+60203329,Marjoram,15 ml,Single Oil,160,213,21
+60203421,Melaleuca,15 ml,Single Oil,157.5,210,21
+60206613,Melaleuca Touch,10 ml,Single Oil,105,140,14
+60214171,Melissa,5 ml,Single Oil,671,895,76
+60203924,Myrrh,15 ml,Single Oil,491.25,655,51
+60203412,Oregano,15 ml,Single Oil,172.5,230,23
+60206614,Oregano Touch,10 ml,Single Oil,112.5,150,15
+60203923,Patchouli,15 ml,Single Oil,220,293,29
+60203323,Peppermint,15 ml,Single Oil,138,184,23
+60217402,Peppermint Beadlet,,Single Oil,105,140,12
+60206569,Peppermint Touch,10 ml,Single Oil,112.5,150,15
+60203936,Petitgrain,15 ml,Single Oil,172.5,230,23
+60203920,Roman Chamomile,5 ml,Single Oil,382.5,510,51
+60206662,Rose Touch,10 ml,Single Oil,487.5,650,65
+60203413,Rosemary,15 ml,Single Oil,123.75,165,16
+60205862,Sandalwood (Hawaiian),5 ml,Single Oil,524,699,60
+60203324,Siberian Fir,15 ml,Single Oil,142.5,190,19
+60206600,Spearmint,15 ml,Single Oil,217.5,290,29
+60205841,Spikenard,5 ml,Single Oil,420,560,55
+60222819,Tangerine,15 ml,Single Oil,127.5,170,16
+60203422,Vetiver,15 ml,Single Oil,383.75,512,41
+60222773,Vetiver Touch,10 ml,Single Oil,247.5,330,33
+60203415,Wild Orange,15 ml,Single Oil,90,120,12
+60203932,Wintergreen,15 ml,Single Oil,135,180,18
+60203414,Ylang Ylang,15 ml,Single Oil,280,373,37
+60210367,Adaptiv,15 ml,Blend,283.75,378,37
+60210337,Adaptiv Touch,10 ml,Blend,150,200,20
+60217400,Air-X,15 ml,Blend,173.75,232,23
+60206563,ClaryCalm,10 ml,Blend,218.75,292,28
+60209540,DDR Prime,15 ml,Blend,225,300,29
+60203802,dōTERRA AromaTouch®,15 ml,Blend,217.5,290,29
+60203389,dōTERRA Balance®,15 ml,Blend,157.5,210,21
+60209560,dōTERRA Brave®,10 ml Roll-On,Blend,165,220,22
+60203392,dōTERRA Breathe®,15 ml,Blend,172.5,230,23
+60206570,dōTERRA Breathe® Touch,10 ml,Blend,112.5,150,15
+60209630,dōTERRA Calmer®,10 ml Roll-On,Blend,150,200,20
+60203806,dōTERRA Cheer®,5 ml,Blend,195,260,26
+60206655,dōTERRA Cheer® Touch,10 ml,Blend,120,160,16
+60203807,dōTERRA Console®,5 ml,Blend,285,380,38
+60206594,dōTERRA Console® Touch,10 ml,Blend,180,240,24
+60203394,dōTERRA Deep Blue®,5 ml,Blend,216,288,36
+60217197,dōTERRA Deep Blue® Touch,10 ml,Blend,322.5,430,42
+60203789,dōTERRA Elevation®,15 ml,Blend,348.5,465,42
+60203821,dōTERRA Forgive®,5 ml,Blend,157.5,210,21
+60206593,dōTERRA Forgive® Touch,10 ml,Blend,101.25,135,13
+60220636,dōTERRA Mālama®,15 ml,Blend,181.25,242,23
+60203796,dōTERRA Motivate®,5 ml,Blend,180,240,24
+60206660,dōTERRA Motivate®Touch,10 ml,Blend,112.5,150,15
+60206656,dōTERRA Passion® Touch,10 ml,Blend,185,247,13
+60203823,dōTERRA Peace®,5 ml,Blend,232.5,310,31
+60206559,dōTERRA Peace® Touch,10 ml,Blend,150,200,20
+60203424,dōTERRA Purify®,15 ml,Blend,150,200,20
+60209586,dōTERRA Rescuer®,10 ml Roll-On,Blend,120,160,16
+60220994,dōTERRA Serenity®,15 ml,Blend,255,340,34
+60209588,dōTERRA Steady®,10 ml Roll-On,Blend,120,160,16
+60209587,dōTERRA Stronger®,10 ml Roll-On,Blend,112.5,150,15
+60210369,dōTERRA Tamer®,10 ml Roll-on,Blend,112.5,150,15
+60209589,dōTERRA Thinker®,10 ml Roll-On,Blend,127.5,170,17
+60226065,Forest Bathing™,15 ml,Blend,236.25,315,28
+60206659,HD Clear®,10 ml Roll-on,Blend,135,180,18
+60223645,dōTERRA Hope™ Touch,10 ml,Blend,156.25,208,20
+60206670,InTune®,10 ml,Blend,252.5,337,32
+60203410,On Guard®,15 ml,Blend,270,360,36
+60217403,On Guard® Beadlets Pastilhas de Especiarias,,Blend,116.25,155,15
+60206568,On Guard® Touch,10 ml,Blend,180,240,24
+60206562,PastTense®,10 ml,Blend,150,200,20
+60206573,Salubelle® Blend Anti-Idade,10 ml,Blend,543.75,725,68
+60219484,Sunny Citrus,15 ml,Blend,142.5,190,16
+60226208,SuperMint® Pastilhas sabor especiarias,125 pastilhas,Blend,109,145,16
+60216342,TerraShield®,15 ml,Blend,82.5,110,11
+60216378,TerraShield® Borrifador,30 ml,Blend,148.75,198,19
+60215129,Whisper®Touch,5 ml Roll On,Blend,112.5,150,15
+60209636,Yarrow | Pom,15 ml,Blend,352.5,470,47
+60212418,Yarrow | Pom Ativo Botânico Nutritivo Duo,30 ml,Blend,697.5,930,93
+60203931,Zendocrine®,15 ml,Blend,185,247,24
+60214934,ZenGest®,15 ml,Blend,265,353,35
+60214935,ZenGest® Touch,10 ml,Blend,172.5,230,23
+60215485,Basil (Aroma Natural),5 ml,Natural Flavoring,77.5,103,9
+60216373,Bergamot (Aroma Natural),5 ml,Natural Flavoring,92.5,123,12
+60214247,Black Pepper (Aroma Natural),5 ml,Natural Flavoring,187.5,250,24
+60208245,Cardamomo (Aroma Natural),5 ml,Natural Flavoring,203.75,272,29
+60214077,Cassia (Aroma Natural),5 ml,Natural Flavoring,60,80,8
+60224736,Celery Seed (Aroma Natural),5 ml,Natural Flavoring,76,101,12
+60214079,Cilantro (Aroma Natural),5 ml,Natural Flavoring,70,93,9
+60215478,Cinnamon Bark (Aroma Natural),5 ml,Natural Flavoring,188.75,252,24
+60215437,Clary Sage (Aroma Natural),5 ml,Natural Flavoring,122.5,163,17
+60215486,Clove (Aroma Natural),5 ml,Natural Flavoring,54.5,73,7
+60215576,Copaiba (Aroma Natural),5 ml,Natural Flavoring,120,160,16
+60208433,Coriander (Aroma Natural),5 ml,Natural Flavoring,65,87,9
+60221274,dōTERRA MetaPWR® (Aroma Natural),15 ml,Natural Flavoring,223.75,298,27
+60208242,Fennel (Aroma Natural),5 ml,Natural Flavoring,47.5,63,6
+60215519,Frankincense (Aroma Natural),5 ml,Natural Flavoring,202.5,270,27
+60208432,Geranium (Aroma Natural),5 ml,Natural Flavoring,93.75,125,12
+60214090,Ginger (Aroma Natural),5 ml,Natural Flavoring,96.25,128,11
+60214078,Grapefruit (Aroma Natural),5 ml,Natural Flavoring,55,73,6
+60215530,Juniper Berry (Aroma Natural),5 ml,Natural Flavoring,157.5,210,21
+60214667,Lavender (Aroma Natural),5 ml,Natural Flavoring,77.5,103,10
+60225674,Lemon (Aroma Natural),5 ml,Natural Flavoring,36.25,48,4
+60214248,Lemongrass (Aroma Natural),5 ml,Natural Flavoring,32.5,43,4
+60214246,Lime (Aroma Natural),5 ml,Natural Flavoring,43.75,58,5
+60224735,Madagascar Vanilla (Aroma Natural),5 ml,Natural Flavoring,207,276,34
+60207183,Marjoram (Aroma Natural),5 ml,Natural Flavoring,66.25,88,8
+60208387,Myrrh (Aroma Natural),5 ml,Natural Flavoring,186.25,248,19
+60214244,On Guard® (Aroma Natural),5 ml,Natural Flavoring,105,140,14
+60214672,Oregano (Aroma Natural),5 ml,Natural Flavoring,75,100,10
+60207163,Patchouli (Aroma Natural),5 ml,Natural Flavoring,85,113,11
+60215479,Peppermint (Aroma Natural),5 ml,Natural Flavoring,68.75,92,9
+60208436,Petitgrain (Aroma Natural),5 ml,Natural Flavoring,68.75,92,9
+60215533,Rosemary (Aroma Natural),5 ml,Natural Flavoring,50,67,6
+60207211,Siberian Fir (Aroma Natural),5 ml,Natural Flavoring,52.5,70,7
+60208435,Spearmint (Aroma Natural),5 ml,Natural Flavoring,73.75,98,10
+60214671,Tangerine (Aroma Natural),5 ml,Natural Flavoring,52.5,70,7
+60208434,Thyme (Aroma Natural),5 ml,Natural Flavoring,92.5,123,11
+60213132,Turmeric (Aroma Natural),15 ml,Natural Flavoring,218.75,292,28
+60216372,Vetiver (Aroma Natural),5 ml,Natural Flavoring,162.5,217,18
+60214245,Wild Orange (Aroma Natural),5 ml,Natural Flavoring,32.5,43,4
+60207178,Ylang Ylang (Aroma Natural),5 ml,Natural Flavoring,92,123,15
+60208386,Zendocrine® (Aroma Natural),5 ml,Natural Flavoring,73.75,98,9
+60215489,ZenGest® (Aroma Natural),5 ml,Natural Flavoring,105,140,11
+60224797,dōTERRA MetaBody System Pastilha,90 pastilhas,MetaPWR,236.25,315,28
+60212032,Correct-X®,15 ml,Body Care,105,140,12
+60222822,dōTERRA Breathe® Balm Stick,13.5 g,Body Care,111.25,148,14
+60206121,dōTERRA Deep Blue® Rub,120 g,Body Care,222.75,297,33
+60227472,dōTERRA Deep Blue® Rub,5 bisnagas de 4 g,Body Care,60,80,5
+60224643,dōTERRA Deep Blue® Stick + Copaíba,30 g,Body Care,139,185,23
+60231266,dōTERRA Pūre™ Femme,60 ml,Body Care,375,500,50
+60231267,dōTERRA Pūr™ Homme,60 ml,Body Care,375,500,50
+60226663,Gua Sha Beauty Collection,1 Kit,Body Care,398,531,55
+60228314,Lavender Fields™ Body Splash,100 ml,Body Care,142.88,191,18
+60215500,Óleo de Coco Fracionado,115 ml,Body Care,106.25,142,11
+60213946,On Guard® Creme Dental Clareador Natural,125 g,Body Care,70,93,5
+60227968,On Guard® Creme Dental Clareador Natural,Pacote com 5 unidades de 4g,Body Care,18.75,25,1
+60205839,dōTERRA® Spa Citrus Bliss Loção para as Mãos,75 ml,Spa,72.5,97,9
+60205845,dōTERRA Spa Esfoliante para o Corpo,226 g,Spa,158.5,211,16
+60205838,dōTERRA Spa Loção para Mãos e Corpo,200 ml,Spa,112,149,13
+60205756,dōTERRA Spa Manteiga Hidratante Corporal,198 g,Spa,168,224,14
+60205757,dōTERRA Spa Sabonete Hidratante para o Corpo,250 ml,Spa,98,131,10
+60216929,dōTERRA Condicionador Diário,500 ml,Hair Care,159,212,18
+60216922,Condicionador Sem Enxágue,237 ml,Hair Care,148.75,198,15
+60216948,Shampoo Protetor,500 ml,Hair Care,145,193,18
+60215817,Veráge® Tônico Facial,50 ml,Verage,217,289,22
+60226662,Veráge® Creme Hidratante,48 g,Verage,227.5,303,32
+60203401,Veráge® Hidratante Facial,30 ml,Verage,217.5,290,27
+60230644,Veráge® Hidratante Mineral,36.5 g,Verage,192,256,31
+60215422,dōTERRA® Brasil Living Kit,,Kit,720,960,120
+60225644,dōTERRA Essencial Para o Lar (Pebble),Kit,Kit,1888,2517,200
+60233194,Construa Seu Legado,1 Kit,Kit,1200,1600,200
+60229796,dōTERRA Kit Início Rápido,1 Kit,Kit,600,800,100
+60228023,dōTERRA Kit Primeiros Cuidados,1 kit,Kit,1122.5,1497,132
+60216401,Kit Técnica dōTERRA AromaTouch® com Difusor,Um Kit,Kit,1225,1633,115
+60219241,Class in a Box,1 Kit,Collection,95,127,0
+60233879,Coleção Collector's,"1 Kit Completo (Inspire, Conforto, Equilíbrio e Revitalize)",Collection,892,1189,135
+60233776,Collector's Kit Inspire,Kit com 3 Óleos Essenciais,Collection,268,357,46
+60233777,Collector's Kit Conforto,Kit com 2 frascos de 15 ml e 1 frasco de 5 ml,Collection,285,380,48
+60233778,Collector's Kit Equilíbrio,Kit com 3 frascos de 15 ml,Collection,298,397,46
+60233775,Collector's Kit Revitalize,Kit com 3 frascos de 15 ml,Collection,263,351,48
+60215468,dōTERRA®Essencial para o Lar (Petal),1 Kit,Collection,1888,2517,200
+60209805,dōTERRA Kids Kit,Um Kit,Collection,766.25,1022,89
+60215282,dōTERRA® Kit de Apresentação,Kit com 3 frascos de 5 ml,Collection,140,187,12
+60218769,Kit dōTERRA Emotional Aromatherapy® Touch,1 kit,Collection,751.25,1002,100
+60215361,Kit Técnica dōTERRA AromaTouch®,8 frascos de 5 ml,Collection,780,1040,104
+60225364,"Kit Técnica dōTERRA AromaTouch® 2,5 ml","Kit com 8 frascos de 2,5 ml",Collection,349,465,52
+60227503,dōTERRA® Blooming Trio,1 Kit,Collection,281.25,375,33
+60205909,DDR Prime® Pastilha,90 pastilhas,Supplement,243.75,325,30
+60222615,On Guard®+ Pastilha,"13,8 g (60 unidades)",Supplement,186.25,248,22
+60226006,Adaptiv® Pastilhas,60 pastilhas,Supplement,231.25,308,31
+60231984,Copaiba Pastilha,"13,8 g (60 unidades)",Supplement,189,252,28
+60229844,dōTERRA Beauty Power™,210 g,Supplement,198,264,35
+60233685,dōTERRA® Creatina Lifepower™,105g,Supplement,179,239,27
+60228146,Lifeshōt®,1 litro,Supplement,156,208,24
+60230860,Lifeshōt®,2 Unidades + Óleo Essencial 2.5 ml*,Supplement,315,420,52
+60223612,Turmeric Pastilha,13.8 g (60 unidades),Supplement,186.25,248,24
+60205740,dōTERRA® VM Complex®,"98,4 g (120 cápsulas)",Supplement,186,248,28
+60205950,Zendocrine® Pastilha,"13,8 g (60 unidades)",Supplement,168,224,21
+60205951,ZenGest® Pastilha,13.8 g (60 unidades),Supplement,161.25,215,20
+60229184,Difusor de Parede Myst,,Accessory,371.25,495,10
+60215423,Difusor Petal,,Accessory,498.75,665,30
+60226416,Kit Difusor Pebble™,Kit,Accessory,373.75,498,13
+60220484,dōTERRA Dawn® Umidificador Aromático,,Accessory,598,797,15
+60217040,Livro Culinária Essencial Luri Toledo,1 livro,Accessory,112.5,150,10
+60221857,Livro dōTERRA® Spa Essencial,,Accessory,90,120,10
+60206688,Óleo Essencial Capstickers,,Accessory,6,8,0
+60207429,Wooden Box,1 caixa (25 compartimentos),Accessory,79,105,0
 60234209,Kit Genesis Performance,1 Kit,Kit,590,787,100
-

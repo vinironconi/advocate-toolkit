@@ -7,7 +7,7 @@ EXCHANGE_RATE = int(1300)
 
 
 def load_products(filename):
-    with open(filename, newline="") as file:
+    with open(filename, newline="", encoding="utf-8") as file:
         products = []
         for row in csv.DictReader(file):
             row["regular"] = float(row["regular"])
